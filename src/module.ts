@@ -39,6 +39,7 @@ export default defineNuxtModule<ModuleOptions>({
           'animejs/draggable',
           'animejs/timeline',
           'animejs/timer',
+          'animejs/events',
           'tailwind-merge',
           'lodash-es',
         )

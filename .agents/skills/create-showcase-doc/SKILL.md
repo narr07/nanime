@@ -186,7 +186,7 @@ New pages need two more edits:
 ## Verifying the page renders
 
 If a docs dev server is available (`docs` in `.claude/launch.json`, port
-3001), open the new page in the Browser pane and confirm: the preview
+3000), open the new page in the Browser pane and confirm: the preview
 renders, the collapsible toggles and reveals the prompt text, and there are
 no console errors. See the project's own verification workflow rather than
 reporting the page done on markdown correctness alone.

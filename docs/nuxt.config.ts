@@ -1,6 +1,10 @@
 export default defineNuxtConfig({
   extends: ['docus'],
-  modules: ['nuxt-studio', 'nanime'],
+  // nuxt-studio removed: on Windows it crashes nuxt-component-meta with
+  // "The URL must be of scheme file" while resolving a component path
+  // (mlly's pathToFileURL). Only affects the in-browser Studio editor UI,
+  // not content rendering.
+  modules: ['nanime'],
   components: {
     global: true,
     dirs: ['~/components'],
@@ -24,7 +28,7 @@ export default defineNuxtConfig({
     client: false,
   },
   devServer: {
-    port: 3001,
+    port: 3000,
   },
   nitro: {
     prerender: {

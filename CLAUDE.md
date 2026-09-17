@@ -10,7 +10,7 @@ Nuxt module (`nanime`) wrapping [Anime.js v4](https://animejs.com/) with Vue 3 r
 | Composables | `src/runtime/app/composables/` |
 | Utilities / types | `src/runtime/app/utils/` |
 | Anime.js source | `anime-core/anime/` (git submodule, v4.4.1) |
-| Docs site (Docus) | `docs/` — dev on port 3001 |
+| Docs site (Docus) | `docs/` — dev on port 3000 |
 | Playground | `playground/` |
 | Tests | `test/` — 4 vitest projects (unit, e2e, fixtures, suites) |
 | Agent skills | `.agents/skills/` (also symlinked at `.agent/skills`) |
@@ -124,7 +124,7 @@ Docus-based site in `docs/`. Content lives in `docs/content/`:
 - `2.composables/` — one page per composable
 - `4.misc/` — easings, utils
 
-Run docs dev: `cd docs && pnpm dev` (port 3001).
+Run docs dev: `cd docs && pnpm dev` (port 3000).
 
 ## Code Style
 
