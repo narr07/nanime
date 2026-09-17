@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { spring } from '#nanime/easings'
-import ExampleWrapper from '../../../shared/ExampleWrapper.vue'
 
 const props = defineProps<{
   ease?: string

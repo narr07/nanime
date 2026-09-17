@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { cubicBezier } from '#nanime/easings'
 import { stagger } from '#nanime/utils'
-import ExampleWrapper, { type ExampleAction } from '~/components/shared/ExampleWrapper.vue'
+import type { ExampleAction } from '~/components/shared/ExampleWrapper.vue'
 
 const progress = ref(0)
 const isPlaying = ref(false)

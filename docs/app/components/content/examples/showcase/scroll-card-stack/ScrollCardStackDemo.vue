@@ -3,7 +3,6 @@ import { onScroll } from 'animejs/events'
 import { stagger } from '#nanime/utils'
 import { useMediaQuery } from '@vueuse/core'
 import type { AnimationParams } from '#nanime/types'
-import ExampleWrapper from '~/components/shared/ExampleWrapper.vue'
 import SuitIcon from './SuitIcon.vue'
 
 const suits: Array<'spade' | 'heart' | 'diamond' | 'club'> = [

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { scrambleText } from '#nanime/proxies/text'
-import ExampleWrapper from '~/components/shared/ExampleWrapper.vue'
 
 const box = useTemplateRef('box')
 const label = useTemplateRef('label')

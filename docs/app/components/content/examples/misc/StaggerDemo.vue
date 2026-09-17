@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { stagger } from '#nanime/utils'
-import ExampleWrapper from '../../../shared/ExampleWrapper.vue'
 
 const items = useTemplateRef('items')
 

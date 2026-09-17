@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { snap } from '#nanime/utils'
 import type { AnimationParams } from '#nanime/types'
-import ExampleWrapper from '~/components/shared/ExampleWrapper.vue'
 
 const defaults: AnimationParams = {
   x: { to: 300 },

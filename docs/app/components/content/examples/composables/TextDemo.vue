@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { stagger } from '#nanime/utils'
-import ExampleWrapper from '../../../shared/ExampleWrapper.vue'
 
 const text = useTemplateRef('phrase')
 const { chars } = useSplitText(text, {

@@ -2,7 +2,7 @@
 import { animate, createTimer, random } from '#nanime/utils'
 import type { JSAnimation, Timer } from '#nanime/types'
 import { tryOnScopeDispose, useEventListener, useIntervalFn } from '@vueuse/core'
-import ExampleWrapper, { type ExampleAction } from '~/components/shared/ExampleWrapper.vue'
+import type { ExampleAction } from '~/components/shared/ExampleWrapper.vue'
 
 const container = useTemplateRef<HTMLElement>('container')
 const textRef = useTemplateRef<HTMLElement>('textRef')

@@ -7,7 +7,14 @@ export default defineNuxtConfig({
   modules: ['nanime'],
   components: {
     global: true,
-    dirs: ['~/components'],
+    dirs: [
+      // Registered unprefixed so demo files can drop the manual default
+      // import and use <ExampleWrapper> directly, instead of the
+      // directory-prefixed <SharedExampleWrapper> Nuxt would otherwise
+      // generate for a component nested under components/shared/.
+      { path: '~/components/shared', pathPrefix: false },
+      { path: '~/components', ignore: ['shared/**'] },
+    ],
   },
   app: {
     head: {

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { createMotionPath, morphTo } from '#nanime/proxies/svg'
-import ExampleWrapper from '~/components/shared/ExampleWrapper.vue'
 
 const pathEl = useTemplateRef<SVGPathElement>('walkPath')
 

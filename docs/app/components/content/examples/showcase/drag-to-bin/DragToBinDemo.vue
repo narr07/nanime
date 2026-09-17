@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import ExampleWrapper from '~/components/shared/ExampleWrapper.vue'
 import DragBinCard from './DragBinCard.vue'
 
 const cards = ['Design system', 'Nuxt SSR', 'Anime.js v4', 'Tailwind CSS'].map(label => ({

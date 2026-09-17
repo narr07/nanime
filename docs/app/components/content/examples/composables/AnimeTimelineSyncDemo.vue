@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import ExampleWrapper from '~/components/shared/ExampleWrapper.vue'
-
 const circleAnimation = useAnimate('.circle', { x: '15rem' })
 const tlA = useAnimeTimeline({ loop: true, alternate: true })
 

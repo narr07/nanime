@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { spring } from '#nanime/easings'
-import ExampleWrapper from '~/components/shared/ExampleWrapper.vue'
 
 const container = useTemplateRef('container')
 const draggable = useTemplateRef('draggable')

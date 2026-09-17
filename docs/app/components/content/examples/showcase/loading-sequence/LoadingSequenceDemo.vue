@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { tryOnScopeDispose } from '@vueuse/core'
-import ExampleWrapper, { type ExampleAction } from '~/components/shared/ExampleWrapper.vue'
+import type { ExampleAction } from '~/components/shared/ExampleWrapper.vue'
 
 const SCRAMBLE_DURATION = 600
 const STEP_DELAY = 500 // 500ms pause after text has fully scrambled

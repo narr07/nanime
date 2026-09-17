@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { tryOnScopeDispose } from '@vueuse/core'
 import { spring } from '#nanime/easings'
-import ExampleWrapper from '~/components/shared/ExampleWrapper.vue'
 
 const DISMISS_THRESHOLD = 90
 const EXIT_DURATION = 350

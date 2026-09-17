@@ -2,8 +2,6 @@
 import { useIntervalFn } from '@vueuse/core'
 import { round } from '#nanime/utils'
 
-import ExampleWrapper from '~/components/shared/ExampleWrapper.vue'
-
 const counter = reactive({ x: 0 })
 const animator = useAnimatable(counter, {
   x: 100,

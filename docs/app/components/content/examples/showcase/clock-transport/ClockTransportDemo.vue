@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ExampleWrapper, { type ExampleAction, type ExampleSlider } from '~/components/shared/ExampleWrapper.vue'
+import type { ExampleAction, ExampleSlider } from '~/components/shared/ExampleWrapper.vue'
 
 const DAY_MS = 24 * 60 * 60 * 1000
 const SPEEDS = [0.25, 1, 4] as const
@@ -7,11 +7,12 @@ const SPEEDS = [0.25, 1, 4] as const
 const currentTime = ref(Date.now() % DAY_MS)
 const speedIndex = ref(1)
 const isPlaying = ref(false)
+const currentSpeed = computed(() => SPEEDS[speedIndex.value] ?? SPEEDS[0])
 
 const timeline = useAnimeTimeline({
   autoplay: false,
   loop: true,
-  playbackRate: SPEEDS[speedIndex.value],
+  playbackRate: currentSpeed.value,
   onUpdate: (self) => {
     currentTime.value = self.currentTime
   },
@@ -48,7 +49,7 @@ function formatClock(ms: number) {
 
 function cycleSpeed() {
   speedIndex.value = (speedIndex.value + 1) % SPEEDS.length
-  timeline.speed = SPEEDS[speedIndex.value]
+  timeline.speed = currentSpeed.value
 }
 
 const actions = computed<ExampleAction[]>(() => [
@@ -65,7 +66,7 @@ const actions = computed<ExampleAction[]>(() => [
     run: () => timeline.restart(),
   },
   {
-    label: `Speed \xD7${SPEEDS[speedIndex.value]}`,
+    label: `Speed \xD7${currentSpeed.value}`,
     run: cycleSpeed,
   },
 ])
@@ -80,7 +81,7 @@ const slider = computed<ExampleSlider>(() => ({
   },
 }))
 
-const status = computed(() => `${formatClock(currentTime.value)} \xB7 \xD7${SPEEDS[speedIndex.value]}`)
+const status = computed(() => `${formatClock(currentTime.value)} \xB7 \xD7${currentSpeed.value}`)
 </script>
 
 <template>

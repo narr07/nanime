@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { ScrambleTextParams } from '#nanime/types'
 import { useIntervalFn } from '@vueuse/core'
-import ExampleWrapper from '~/components/shared/ExampleWrapper.vue'
 
 const el = useTemplateRef('text')
 
